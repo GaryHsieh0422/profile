@@ -30,10 +30,10 @@ const Navbar: React.FC = () => {
               Profile
             </a>
             <a
-              href="#settings"
+              href="#Project"
               className="text-gray-600 hover:text-gray-900 px-3 py-2 rounded-md text-sm font-medium"
             >
-              Settings
+              Project
             </a>
             <a
               href="#contact"
@@ -101,10 +101,10 @@ const Navbar: React.FC = () => {
               Profile
             </a>
             <a
-              href="#settings"
+              href="#Project"
               className="block pl-3 pr-4 py-2 border-l-4 border-transparent text-base font-medium text-gray-600 hover:text-gray-800 hover:bg-gray-50"
             >
-              Settings
+              Project
             </a>
             <a
               href="#contact"

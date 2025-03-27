@@ -1,35 +1,26 @@
+// app/layout.tsx
 import type { Metadata } from "next";
-import Navbar from "@/components/navbar";
-import { Geist, Geist_Mono } from "next/font/google";
-import "./globals.css";
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
+import Navbar from "../components/navbar";
+import Footer from "../components/footer"; // Add this import
+import "../app/globals.css";
 
 export const metadata: Metadata = {
-  title: "Hsieh Hung Lui",
-  description: "Profile",
+  title: "Profile App",
+  description: "A simple profile website",
 };
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        <Navbar></Navbar>
-        {children}
+      <body className="flex flex-col min-h-screen">
+        <Navbar />
+        <main className="flex-grow">{children}</main>{" "}
+        {/* Flex-grow ensures content takes available space */}
+        <Footer />
       </body>
     </html>
   );
